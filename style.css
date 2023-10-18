@@ -2,13 +2,46 @@
 element>element 	div > p 	Selects all <p> elements where the parent is a <div> element
 element+element 	div + p 	Selects the first <p> element that are placed immediately after <div> elements
 element1~element2 	p ~ ul 	Selects every <ul> element that are preceded by a <p> element */
+@font-face {
+    font-family: Roboto;
+    src: url(./Roboto/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(./Roboto/Roboto-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(./Roboto/Roboto-Light.ttf);
+    font-weight: light;
+}
 
 * {
-    font-family: sans-serif;
+    font-family: Roboto, sans-serif;
+    font-weight: light;
+    font-size: 15px;
+}
+
+h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    margin-bottom: 12px;
 }
 
 img {
     height: 25px;
+}
+
+.button-row>img {
+    height: 20px;
+}
+
+.rotate {
+    transform: rotate(270deg);
 }
 
 body {
@@ -16,8 +49,43 @@ body {
     margin: 0;
 }
 
+.cards>.card {
+    position: relative;
+    display: grid;
+    grid-template-rows: 25px 80px auto;
+}
+
+.cards>.card>.card-body {
+    font-size: 12px;
+}
+
+.card>.tabcolor {
+    position: absolute;
+    background-color: rgb(255, 217, 0);
+    width: 5px;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+
+.card>.title {
+    align-self: end;
+}
+
+.card>.button-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    justify-self: end;
+    align-self: end;
+}
+
 .main-body {
     padding: 0;
+    background-color: rgb(188, 207, 230);
 }
 
 .page {
@@ -25,21 +93,97 @@ body {
     grid-template-columns: 1fr 5fr;
 }
 
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    border-width: 4px;
-}
-
 .header {
     background-color: white;
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    padding: 25px;
+    grid-template-rows: 50px 84px;
+    /* padding: 25px; */
+    padding: 25px 20px;
+    /* gap: 12px; */
+    /* box-shadow: 0px 2px; */
 }
 
-.header-row {
-    display: flex;
+.header-row#row1{
+    height: 50px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    /* grid-template-columns: repeat(5, 1fr); */
+    grid-template-columns: 30px minmax(100px, 1fr) 40px 50px 120px;
+}
+
+.header-row#row1 #notifications {
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.header-row#row1 #searchbar {
+    justify-self: start;
+}
+
+/* searchbar */
+input {
+    border-radius: 16px;
+    border-style: none;
+    outline: none;
+    background-color: rgb(222, 223, 228);
+    width: 40vw;
+    /* width: 350px; */
+    /* flex-grow: 1; */
+}
+
+.header-row#row1 #notifications {
+    /* align-self: flex-end; */
+    justify-self: flex-end;
+    /* background-color: black; */
+}
+
+.greeting {
+    align-self: stretch;
+    display: grid;
+    gap: 8px;
+}
+
+#greeting-small {
+    font-weight: bold;
+    font-size: 12px;
+    /* padding-top: 10px; */
+    align-self: end;
+}
+
+#greeting-big {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.header-row#row2 {
+    display: grid;
+    grid-template-columns: 90px 2fr 1fr;
+}
+
+.user-profile {
+    align-self: center;
+    justify-self: center;
+}
+
+.header-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.header-button {
+    background-color: #1cb7ff;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 32px;
+    padding: 8px 24px;
+    align-self: center;
+    justify-self: center;
 }
 
 .header img {
@@ -53,13 +197,33 @@ body {
     padding: 25px;
     height: 100vh;
     width: 20vw;
+    font-weight: bold;
+
 }
 
+.sidebar-grid {
+    display: grid;
+    grid-auto-flow: row;
+    justify-items: start;
+    /* align-items: center; */
+    gap: 20px;
+}
+
+/* .navigation {
+    height: auto;
+} */
+
 .sidebar-item {
-    display: flex;
+    display: grid;
     align-items: center;
+    /* justify-items: center; */
+    grid-template-columns: 50px auto;
     gap: 10px;
     padding: 8px;
+}
+
+.sidebar-item > .sidebar-icon {
+    justify-self: center;
 }
 
 .sidebar img {
@@ -73,30 +237,78 @@ body {
     gap: 20px;
 }
 
-.cards {
-    display: grid;
-    gap: 50px;
-    /* auto-fill resize later */
-    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+
+#projects,
+.announcements,
+.trending {
+    padding: 20px;
+    /* height: 100%; */
+    /* padding: inherit; */
+}
+
+/* #projects {
+    padding-bottom: 40px;
+} */
+
+.line {
+    height: 0px;
 }
 
 
+.cards {
+    /* height: 99%; */
+    display: grid;
+    gap: 20px;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    align-items: stretch;
+    justify-content: stretch;
+    align-content: stretch;
+}
+
+.card {
+    padding: 12px;
+    border-radius: 8px;
+}
 
 .card,
 .profile {
     background-color: white;
-
 }
 
-.card>title {
+.announcements-cards {
+    border-radius: 8px;
+    display: grid;
+    background-color: white;
+}
+
+.announcements-cards>.line {
+    justify-self: center;
+}
+
+.line {
+    width: 80%;
+    background-color: white;
+    border-style: none none solid none;
+    border-width: 1px;
+    border-radius: 2px;
+    border-color: rgb(180, 180, 180);
+}
+
+.card>.title {
     font-weight: bold;
 }
 
 .profile {
+    padding: 12px;
     display: grid;
     grid-template-areas: "profile-pic handle"
         "profile-pic description";
     grid-template-columns: 25px auto;
+    column-gap: 12px;
+}
+
+.profile>.description {
+    color: grey;
 }
 
 .profile-picture {
@@ -111,12 +323,32 @@ body {
     grid-area: description;
 }
 
-.trending > .profile, 
-.announcements > .card {
-    padding: 25px;
+.trending-cards {
+    border-radius: 8px;
+    border-color: white;
+    border-style: solid;
 }
 
-.trending > .profile {
+.trending>.profile,
+.announcements>.card {
+    padding: 10px;
+}
+
+.trending,
+.announcements {
+    display: grid;
+}
+
+
+.trending>.profile {
     padding-top: 15px;
     padding-bottom: 15px;
 }
+
+.trending {
+    align-self: end;
+}
+
+/* .announcements > .card {
+    
+} */

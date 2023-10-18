@@ -13,115 +13,211 @@
 <body>
     <div class="page">
         <div class="sidebar">
-            <div class="sidebar-item"><img style="height:50px" src="icons/view-dashboard.svg" alt="dashboard">Dashboard
+            <div class="sidebar-grid">
+                <!-- <div class="sidebar-item"><img style="height:40px;" src="icons/view-dashboard.svg"
+                        alt="dashboard">Dashboard
+                </div> -->
+
+                <div class="sidebar-item">
+                    <div class="sidebar-icon"><img style="height:40px;" src="icons/view-dashboard.svg" alt="dashboard">
+                    </div>
+                    <div class="sidebar-text">Dashboard</div>
+                </div>
+
+                <div class="navigation">
+                    <div class="sidebar-item">
+                        <div class="sidebar-icon"><img src="icons/home.svg" alt="home"></div>
+                        <div class="sidebar-text">Home</div>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-icon"><img src="icons/card-account-details-outline.svg" alt="profile"></div>
+                        <div class="sidebar-text">Profiile</div>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-icon"><img src="icons/message.svg" alt="messages"></div>
+                        <div class="sidebar-text">Message</div>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-icon"><img src="icons/clock-time-three.svg" alt="history"></div>
+                        <div class="sidebar-text">History</div>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-icon"><img src="icons/note-multiple.svg" alt="tasks"></div>
+                        <div class="sidebar-text">Tasks</div>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-icon"><img src="icons/account-group.svg" alt="communities"></div>
+                        <div class="sidebar-text">Communities</div>
+                    </div>
+                    <!-- <div class="sidebar-item"><img src="icons/card-account-details-outline.svg" alt="profile">Profile
+                    </div>
+                    <div class="sidebar-item"><img src="icons/message.svg" alt="messages">Messages</div>
+                    <div class="sidebar-item"><img src="icons/clock-time-three.svg" alt="history">History</div>
+                    <div class="sidebar-item"><img src="icons/note-multiple.svg" alt="tasks">Tasks</div>
+                    <div class="sidebar-item"><img src="icons/account-group.svg" alt="communities">Communities</div> -->
+                </div>
+                <!-- grid separation -->
+                <div class="branding">
+                    <div class="sidebar-item">
+                        <div class="sidebar-icon"><img src="icons/cog.svg" alt="settings"></div>
+                        <div class="sidebar-text">Settings</div>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-icon"><img src="icons/help-box.svg" alt="support"></div>
+                        <div class="sidebar-text">Support</div>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-icon"><img src="icons/shield-check.svg" alt="privacy"></div>
+                        <div class="sidebar-text">Privacy</div>
+                    </div>
+
+                    <!-- <div class="sidebar-item"><img src="icons/cog.svg" alt="settings">Settings</div>
+                    <div class="sidebar-item"><img src="icons/help-box.svg" alt="support">Support</div>
+                    <div class="sidebar-item"><img src="icons/shield-check.svg" alt="privacy">Privacy</div> -->
+                </div>
             </div>
-            <div class="sidebar-item"><img src="icons/home.svg" alt="home">Home</div>
-            <div class="sidebar-item"><img src="icons/card-account-details-outline.svg" alt="profile">Profile</div>
-            <div class="sidebar-item"><img src="icons/message.svg" alt="messages">Messages</div>
-            <div class="sidebar-item"><img src="icons/clock-time-three.svg" alt="history">History</div>
-            <div class="sidebar-item"><img src="icons/note-multiple.svg" alt="tasks">Tasks</div>
-            <div class="sidebar-item"><img src="icons/account-group.svg" alt="communities">Communities</div>
-            <div class="sidebar-item"><img src="icons/cog.svg" alt="settings">Settings</div>
-            <div class="sidebar-item"><img src="icons/help-box.svg" alt="support">Support</div>
-            <div class="sidebar-item"><img src="icons/shield-check.svg" alt="privacy">Privacy</div>
         </div>
 
         <div class="main-body">
             <div class="header">
                 <div class="header-row" id="row1">
                     <img src="icons/magnify.svg" alt="glass">
-                    <div id="searchbar"></div>
+                    <div id="searchbar">
+                        <form id="form">
+                            <input type="search" id="query" name="q" placeholder="">
+                            <!-- <button>Search</button> -->
+                        </form>
+                    </div>
                     <div id="notifications"><img src="icons/bell-ring-outline.svg" alt="notifications"></div>
-                    <div class="user-profile"><img src="icons/account-circle.svg" alt="profile picture"></div>
-                    <div class="name">Morgan Oakley</div>
+                    <div class="user-profile"><img src="icons/account-circle.svg" alt="profile picture" style="height: 40px"></div>
+                    <div class="name"><b>Morgan Oakley</b></div>
                 </div>
 
                 <div class="header-row" id="row2">
-                    <div class="user-profile"><img src="icons/account-circle.svg" alt="profile picture"></div>
-                    <div id="greeting">Hi there, Morgan Oakley (@morgan)</div>
-                    <div id="new">New</div>
-                    <div id="upload">Upload</div>
-                    <div id="share">Share</div>
+                    <div class="user-profile"><img src="icons/account-circle.svg" alt="profile picture"
+                            style="height: 80px"></div>
+                    <div class="greeting">
+                        <div id="greeting-small">Hi there,</div>
+                        <div id="greeting-big"> Morgan Oakley (@morgan)</div>
+                    </div>
+                    <!-- grid buttons -->
+                    <div class="header-buttons">
+                        <div class="header-button" id="new">New</div>
+                        <div class="header-button" id="upload">Upload</div>
+                        <div class="header-button" id="share">Share</div>
+                    </div>
                 </div>
             </div>
             <div class="body-content">
                 <div id="projects">
-                    Your Projects
+                    <h2>Your Projects</h2>
                     <div class="cards">
                         <div class="card">
+                            <div class="tabcolor"></div>
                             <div class="title">title 1</div>
                             <div class="card-body">desc</div>
                             <div class="button-row">
-                                <img src="icons/account-group.svg" alt="account">
+                                <img src="icons/star-plus-outline.svg" alt="favorite">
+                                <img src="icons/eye-plus-outline.svg" alt="watch">
+                                <img src="icons/share-variant-outline.svg" alt="share" class="rotate">
                             </div>
                         </div>
                         <div class="card">
+                            <div class="tabcolor"></div>
                             <div class="title">title 2</div>
                             <div class="card-body">desc</div>
-                            <div class="button-row"></div>
+                            <div class="button-row"> <img src="icons/star-plus-outline.svg" alt="favorite">
+                                <img src="icons/eye-plus-outline.svg" alt="watch">
+                                <img src="icons/share-variant-outline.svg" alt="share" class="rotate">
+                            </div>
                         </div>
                         <div class="card">
+                            <div class="tabcolor"></div>
                             <div class="title">title 3</div>
                             <div class="card-body">desc</div>
-                            <div class="button-row"></div>
+                            <div class="button-row"> <img src="icons/star-plus-outline.svg" alt="favorite">
+                                <img src="icons/eye-plus-outline.svg" alt="watch">
+                                <img src="icons/share-variant-outline.svg" alt="share" class="rotate">
+                            </div>
                         </div>
                         <div class="card">
+                            <div class="tabcolor"></div>
                             <div class="title">title 4</div>
                             <div class="card-body">desc</div>
-                            <div class="button-row"></div>
+                            <div class="button-row"> <img src="icons/star-plus-outline.svg" alt="favorite">
+                                <img src="icons/eye-plus-outline.svg" alt="watch">
+                                <img src="icons/share-variant-outline.svg" alt="share" class="rotate">
+                            </div>
                         </div>
                         <div class="card">
+                            <div class="tabcolor"></div>
                             <div class="title">title 5</div>
                             <div class="card-body">desc</div>
-                            <div class="button-row"></div>
+                            <div class="button-row"> <img src="icons/star-plus-outline.svg" alt="favorite">
+                                <img src="icons/eye-plus-outline.svg" alt="watch">
+                                <img src="icons/share-variant-outline.svg" alt="share" class="rotate">
+                            </div>
                         </div>
                         <div class="card">
+                            <div class="tabcolor"></div>
                             <div class="title">title 6</div>
                             <div class="card-body">desc</div>
-                            <div class="button-row"></div>
+                            <div class="button-row"> <img src="icons/star-plus-outline.svg" alt="favorite">
+                                <img src="icons/eye-plus-outline.svg" alt="watch">
+                                <img src="icons/share-variant-outline.svg" alt="share" class="rotate">
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="right-side">
-                    <div class="announcements">Announcements
-                        <div class="card">
-                            <div class="title">Site Mainteinance</div>
-                            <div class="card-body">test</div>
-                        </div>
-                        <div class="card">
-                            <div class="title">Community Share Day</div>
-                            <div class="card-body">test</div>
-                        </div>
-                        <div class="card">
-                            <div class="title">Updated Privacy Policy</div>
-                            <div class="card-body">test</div>
+                    <div class="announcements">
+                        <h2>Announcements</h2>
+                        <div class="announcements-cards">
+                            <div class="card">
+                                <div class="title">Site Mainteinance</div>
+                                <div class="card-body">test</div>
+                            </div>
+                            <div class="line"></div>
+
+                            <div class="card">
+                                <div class="title">Community Share Day</div>
+                                <div class="card-body">test</div>
+                            </div>
+                            <div class="line"></div>
+                            <div class="card">
+                                <div class="title">Updated Privacy Policy</div>
+                                <div class="card-body">test</div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="trending">Trending
-                        <div class="profile">
-                            <div class="profile-picture"><img src="icons/account-circle.svg" alt="profile picture">
+                    <div class="trending">
+                        <h2>Trending</h2>
+                        <div class="trending-cards">
+                            <div class="profile">
+                                <div class="profile-picture"><img src="icons/account-circle.svg" alt="profile picture">
+                                </div>
+                                <div class="handle">@test</div>
+                                <div class="description">desc</div>
                             </div>
-                            <div class="handle">@test</div>
-                            <div class="description">desc</div>
-                        </div>
-                        <div class="profile">
-                            <div class="profile-picture"><img src="icons/account-circle.svg" alt="profile picture">
+                            <div class="profile">
+                                <div class="profile-picture"><img src="icons/account-circle.svg" alt="profile picture">
+                                </div>
+                                <div class="handle">@test</div>
+                                <div class="description">desc</div>
                             </div>
-                            <div class="handle">@test</div>
-                            <div class="description">desc</div>
-                        </div>
-                        <div class="profile">
-                            <div class="profile-picture"><img src="icons/account-circle.svg" alt="profile picture">
+                            <div class="profile">
+                                <div class="profile-picture"><img src="icons/account-circle.svg" alt="profile picture">
+                                </div>
+                                <div class="handle">@test</div>
+                                <div class="description">desc</div>
                             </div>
-                            <div class="handle">@test</div>
-                            <div class="description">desc</div>
-                        </div>
-                        <div class="profile">
-                            <div class="profile-picture"><img src="icons/account-circle.svg" alt="profile picture">
+                            <div class="profile">
+                                <div class="profile-picture"><img src="icons/account-circle.svg" alt="profile picture">
+                                </div>
+                                <div class="handle">@test</div>
+                                <div class="description">desc</div>
                             </div>
-                            <div class="handle">@test</div>
-                            <div class="description">desc</div>
                         </div>
                     </div>
                 </div>
